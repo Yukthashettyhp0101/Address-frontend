@@ -123,9 +123,9 @@ export const AddressList = () => {
     }
   };
 
-  useEffect(() => {
-    fetchAddresses();
-  }, []);
+  // useEffect(() => {
+  //   fetchAddresses();
+  // }, []);
 
   return (
     <>
