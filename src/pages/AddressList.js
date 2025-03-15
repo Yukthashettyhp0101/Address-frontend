@@ -133,11 +133,11 @@ export const AddressList = () => {
     <>
       <Navigation />
       <div className={styles.container}>
-        {loading ? (
-          <p className={styles.loadingMessage}>Loading addresses...</p>
-        ) : addresses.length !== 0 ? (
-          addresses.map((address) => (
-            <div key={address.id} className={styles.enhancedList}>
+        {
+
+          sampleData && sampleData.length !== 0 &&  (
+            sampleData.map((address) => (
+              <div key={address.id} className={styles.enhancedList}>
               {editingId === address.id ? (
                 <div className={styles.editFields}>
                   <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -163,10 +163,9 @@ export const AddressList = () => {
               )}
             </div>
           ))
-        ) : (
-          <p className={styles.emptyMessage}>No addresses found. Add a new address to get started!</p>
-        )}
-      </div>
-    </>
-  );
-};
+        )
+      }
+        </div>
+        </>
+      );
+    };
