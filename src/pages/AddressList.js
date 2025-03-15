@@ -16,6 +16,7 @@ export const AddressList = () => {
   const [addresses, setAddresses] = useState([]);
   const [editingId, setEditingId] = useState(null);
   const [loading, setLoading] = useState(true);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -62,8 +63,9 @@ export const AddressList = () => {
   const fetchAddresses = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`${process.env.REACT_APP_HOME_API}`);
-      setAddresses(response.data.length > 0 ? response.data : sampleData);
+      // const response = await axios.get(`${process.env.REACT_APP_HOME_API}`);
+      // setAddresses(response.data.length > 0 ? response.data : sampleData);
+      console.log("Fetching address list dummy..")
     } catch (error) {
      
       setAddresses(sampleData);
@@ -123,9 +125,9 @@ export const AddressList = () => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchAddresses();
-  // }, []);
+  useEffect(() => {
+    fetchAddresses();
+  }, []);
 
   return (
     <>
