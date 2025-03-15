@@ -1,0 +1,114 @@
+/* Default modal size */
+.modal-dialog {
+  max-width: 400px;
+  width: 90%; 
+  margin: auto;
+  justify-content: center;
+}
+
+
+.modal-content {
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Input Fields & Textarea */
+.addaddress-fields input,
+.addaddress-fields textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.addaddress-fields input:focus,
+.addaddress-fields textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Submit Button */
+.btn-primary {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 350px;
+    width: 90%;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .addaddress-fields input,
+  .addaddress-fields textarea {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .btn-primary {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-dialog {
+    max-width: 320px;
+  }
+
+  .modal-title {
+    font-size: 14px;
+  }
+
+  .modal-header {
+    padding: 6px;
+  }
+
+  .addaddress-fields input,
+  .addaddress-fields textarea {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .btn-primary {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

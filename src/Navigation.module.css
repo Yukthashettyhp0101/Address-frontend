@@ -1,0 +1,114 @@
+.navContainer {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, #945d10, #edc784);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.6s ease-in-out forwards;
+    flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+/* Logo and Title */
+.logoTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 5px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Papyrus, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1.5px;
+}
+
+/* Add Button */
+.addButton {
+    background-color: #975c10;
+    color: #edc784;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.addButton:hover {
+    background-color: #f4a261;
+    transform: translateY(-2px);
+}
+
+.addButton svg {
+    font-size: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navContainer {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .addButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .addButton {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+}

@@ -1,0 +1,114 @@
+/* App Container */
+.appContainer {
+    display: flex;  
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 20px;
+    padding: 0; /* Removed background color */
+    background: #fff; /* Ensure no background color is applied */
+}
+
+/* Address Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    flex: 1 1 250px;
+    max-width: 350px;
+    padding: 15px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #007bff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Icon Actions */
+.iconActions {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.iconEdit,
+.iconDelete {
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.iconEdit:hover {
+    color: #007bff;
+}
+
+.iconDelete:hover {
+    color: red;
+}
+
+/* Address Details */
+.details {
+    margin-top: 10px;
+}
+
+.details h5 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Buttons */
+.btnPrimary {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnDanger {
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btnPrimary:hover,
+.btnDanger:hover {
+    opacity: 0.9;
+}
+
+/* Hide Add Address Container by Default */
+.addAddressContainer {
+    display: none;
+}
+
+/* Show Add Address Container When Needed */
+.showAddAddressContainer {
+    display: block;
+}
+
+/* Remove Extra Space Between Navbar and Address List */
+.addressList {
+    margin-top: 0 !important;
+    padding-top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .appContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
